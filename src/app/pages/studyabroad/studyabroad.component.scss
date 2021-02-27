@@ -1,0 +1,50 @@
+@import '../../../styles.scss';
+
+.study-destinations {
+    .sub-title{
+        display: flex;
+        justify-content: center;
+    }
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 22px;
+  
+      .country-card {
+        box-shadow: $box-shadow;
+  
+        .country-img {
+          img {
+            height: 155px;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+  
+        .country-details {
+          display: grid;
+          grid-template-columns: 75% 25%;
+          padding: 3%;
+  
+          img {
+            height: 32px;
+            width: 100%;
+          }
+        }
+  
+      }
+    }
+  
+  }
+  
+  a{
+    color: $sbablue;
+  }
+
+  
+@media screen and (max-width:900px){
+  .country-grid {
+  grid-template-columns: 100% !important;
+  }
+
+}

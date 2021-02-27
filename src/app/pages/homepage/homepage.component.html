@@ -1,0 +1,124 @@
+<div class="top-pad"></div>
+<section class="home-page-slider">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let slide of homeSlider" class="slide home-slider-overlay">
+      <img class="slider-img" src="{{ slide.image.url }}" alt="" width="100%">
+      <div class="overlay"></div>
+      <div class="text-block">
+        <h1 class="container">{{slide.title}}</h1>
+        <p class="container">{{slide.shortdescription}}</p>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</section>
+
+<section class="study-destinations container">
+  <div class="sub-title common-sub-hed-pad">
+    <h4 class="title-text title-underline">STUDY DESTINATIONS</h4>
+  </div>
+
+  <div class="country-grid">
+    <div *ngFor="let countrycard of studyDestinations ">
+      <div class="country-card"> <!-- *ngIf="countrycard.image.url>=7 === false" -->
+        <div class="country-img">
+          <img src="{{countrycard.image.url}}" />
+        </div>
+        <div class="country-details">
+          <div><h5>{{countrycard.title}} </h5></div>
+          <div>
+            <img src="{{countrycard.countryflag.url}}"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about-equire-section">
+  <div class="about-equire-section-grid container">
+    <div class="about-section">
+      <div class="common-sub-hed-pad">
+        <h4>About Us</h4>
+      </div>
+      <div class="about-description">
+        <markdown data="{{aboutInfo?.AboutUsDescription}}"></markdown>
+      </div>
+    </div>
+    <div class="enqire-form-section">
+
+      <div class="common-sub-hed-pad">
+        <h4>Enquire now</h4>
+      </div>
+      <div class="enquire-form">
+       <div class="enquire-in-grid">
+        <div>
+            <label>first name</label>
+            <input placeholder="enter name">
+        </div>
+        <div>
+            <label>last name</label>
+            <input placeholder="enter last name">
+        </div>
+        <div>
+            <label>email</label>
+            <input placeholder="enter email address">
+        </div>
+        <div>
+            <label>phone</label>
+            <input placeholder="enter phone number">
+        </div>
+      </div>
+      <br/>
+        <div class="textarea">
+          <label>message</label>
+          <textarea></textarea>
+        </div>
+<br/>
+        <button class="submit-btn">
+          submit
+        </button>
+      
+      </div>
+   
+    </div>
+  </div>
+</section>
+
+<section class="visa-categories container">
+  <div class="sub-title common-sub-hed-pad">
+    <h4 class="title-text title-underline">VISA CATEGORIES</h4>
+  </div>
+  <div class="visa-card">
+    <div *ngFor="let visacard of visaCategoryLists " class="visa-categories-card">
+      <div *ngIf="visacard.id >=7 === false">
+        <div class="visa-categories-img">
+          <img src="{{ visacard.image.url }}">
+        </div>
+        <div class="visa-card-info">
+          <div class="visacard-title">
+            <h4>{{visacard.title}}</h4>
+          </div>
+          <div class="visa-card-details">
+            <p> {{visacard.description}}</p>
+          </div>
+          <div class="read-more">
+            <h6 class="title-underline">Read More</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials container">
+    
+      <div class="sub-title common-sub-hed-pad">
+          <h4 class="title-text title-underline">Testimonials</h4>
+        </div>
+  <div class="testimonial-grid">
+
+  </div>
+</section>
+ 

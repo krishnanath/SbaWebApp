@@ -1,0 +1,22 @@
+.about-grid{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding-top:7%;
+    padding-bottom: 7%;
+    grid-gap: 22px;
+    .about-img{
+        img{
+            width:100%;
+            min-height: 444px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+
+    .about-grid{
+         
+        grid-template-columns: 100%;
+    }
+}

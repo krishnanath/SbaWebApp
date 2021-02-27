@@ -1,0 +1,88 @@
+@import '../../../styles.scss';
+
+.page-footer {
+    background: $sbablue;
+    bottom:0;
+}
+.footer-main{
+    border-bottom: 1px solid $white;
+    margin-top:44px;
+    margin-bottom: 18px;
+}
+
+.footer-section {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  .about-desc, .get-in-touch{
+      margin-right: 22px;
+  }
+  .email-sub-btn{
+    
+      .input-button{
+          position: relative;
+          display: flex;
+          button{
+              height: 33px;
+              border-radius: 33px;
+              background: $sbablue;
+              color: $white;
+              border:1px solid $white;
+              margin-top:1px;
+          }
+          input{
+              height: 33px;
+            border-radius: 33px;
+            border:1px solid $white;
+            background: $white;
+            margin-right:-80px;
+            font-size: 13px;    
+            }
+      }
+       
+  }
+.footer-copyright{
+    p{
+    text-align: center;
+    }
+}
+}
+.navlinks{
+    display: flex;
+    justify-content: flex-end;
+    height: 77px;
+    align-items: center;
+     a{
+         text-decoration: none;
+         color: $white;
+         letter-spacing: 3px;
+         margin-right: 25px;
+     }
+     .reduce-margin{
+         margin-right: 0px;
+     }
+}
+
+ 
+@media screen and (max-width: 1024px){
+    .footer-section {
+        grid-template-columns: 100%;
+
+        div{
+            margin-bottom: 22px;
+            h5{
+                text-align: center;
+            }
+            text-align: center;
+        }
+
+    }
+    .navlinks{
+       justify-content: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    .navlinks{
+       display: none;
+     }
+}

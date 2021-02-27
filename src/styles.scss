@@ -1,1 +1,143 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: 'BrandonBlack';
+  src: url('./assets/fonts/BrandonText/BrandonText-Black.ttf');
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('./assets/fonts/BrandonText/BrandonText-Medium.ttf');
+}
+
+
+$sbacolor:#D3AD68;
+$white: #fff;
+// $sbablue: #283747;
+$sbablue: #12151F;
+$textcolor: #5C5F58;
+$overlaydark: #28374780;
+$image-overlay: #0d0d0d69;
+$box-shadow: 0px 4px 9px 4px #00000025;
+$lightcolor: #F3F3F3;
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Yusei Magic', sans-serif !important;
+  font-weight: 100 !important;
+}
+
+p,
+.button,
+a,
+label,
+::placeholder,
+b,
+strong,
+input,
+.rd-nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+
+.btn-call {
+  border: 1px solid $sbacolor;
+  border-radius: 7px;
+  color: $sbacolor;
+  background: $white;
+  text-align: center;
+  height: 40px;
+  width: 177px;
+  line-height: 34px;
+  cursor: pointer;
+
+  a {
+    color: $sbacolor;
+  }
+}
+
+.btn-call:hover {
+  background: $sbacolor;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.top-pad {
+  margin-top: -77px;
+}
+
+.common-sub-hed-pad {
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+.title-underline {
+  padding-bottom: 7px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+  width: fit-content;
+  letter-spacing: 2px;
+}
+
+section {
+  padding-bottom: 3%;
+}
+
+
+
+
+// BANNER IMAGE
+
+
+.common-banner-section {
+  position: relative;
+
+  .banner-image {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: $image-overlay;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+
+  .text-block {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+
+    h3 {
+      text-align: center;
+      color: #ffffff;
+      text-transform: uppercase;
+
+    }
+
+
+  }
+}

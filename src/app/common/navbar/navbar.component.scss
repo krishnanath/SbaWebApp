@@ -1,0 +1,88 @@
+@import '../../../styles.scss';
+
+.material-icons {
+    color: $sbacolor;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    font-size: 26px;
+    justify-items: center;
+    display: grid;
+    padding-top: 8px;
+}
+
+.topbar{
+    display: grid;
+    grid-template-columns: 30% 25% 25% 20%;
+    color: $sbacolor;
+    align-items: center;
+    height: 88px;
+
+    .logo img{
+        
+        width: 122px;
+        height: 55px;
+    }
+}
+.phone, .location {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    margin-right: 22px;
+}
+.logo{
+    display: flex;
+    .letter{
+        margin-left: -97px;
+        margin-top: 24px;
+        h6{
+        // font-family: 'BrandonBlack' !important;
+        font-family: 'BrandonBlack' !important;
+        // letter-spacing: 5px;
+        }
+    }
+
+}
+
+.navbar{
+    width: 100%;
+     height: 77px;
+    background: #2837479a;
+    border-radius: 0;
+    z-index: 7;
+    .navlinks{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 77px;
+        
+       div{
+           margin-right: 33px;
+           p{
+               font-family: 'Brandon'!important;
+               color: $white;
+    
+        letter-spacing: 2px;
+        cursor: pointer;
+           }
+       }
+    }
+}
+
+ 
+@media screen and (max-width:1188px){
+    .topbar{
+        grid-template-columns: 20% 30% 30% 20%;
+
+        .phone, .location {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .topbar{
+        display: none;
+    }
+}

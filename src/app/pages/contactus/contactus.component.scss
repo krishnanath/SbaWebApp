@@ -1,0 +1,89 @@
+ @import '../../../styles.scss';
+
+
+ .container{
+     padding-top: 7%;
+     padding-bottom: 7%;
+ }
+
+ .info-icons-grid{
+     display: grid;
+     grid-template-columns: 33.3% 33.3% 33.3%;
+     color: $sbacolor;
+     .phone , .mail ,  .location{
+         display: flex;
+         justify-content: center;
+         p, .markdown{
+         text-align: center !important;
+         }
+     }
+     .phone, .mail{
+         border-right: 1px solid $sbacolor;
+     }
+     
+ }
+ .form-map-section{
+     display: grid;
+     grid-template-columns: 40% 60%;
+     grid-gap: 33px;
+
+     .enquire-in-grid{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap:17px;
+        label{
+          color: $textcolor;
+        }
+      
+        input{
+          border: 1px solid $sbablue;
+          background: $white;
+          border-radius: 9px;
+        }
+        ::placeholder{
+          padding: 11px !important;
+          font-size: 11px !important;
+        }
+        
+      
+      }
+      .textarea{
+        label{
+          color: $textcolor;
+        }
+      
+        textarea{
+          border: 1px solid $sbablue;
+          background: $white;
+          border-radius: 9px;
+          height: 122px;
+        }
+      }
+      .submit-btn{
+        width: 144px;
+        height: 41px;
+        background: $sbablue;
+        color: $white;
+        box-shadow: $box-shadow;
+        border:1px solid $sbablue;
+      
+      }
+ }
+
+
+
+ @media screen and (max-width:900px){
+    .form-map-section{
+        grid-template-columns: 100%;
+        .google-map{
+            height: 400px;
+        }
+    }
+     .info-icons-grid{
+        grid-template-columns: 100%;
+        .phone, .mail{
+            border-right: none;
+            padding-bottom: 20px;
+         }
+    }
+}

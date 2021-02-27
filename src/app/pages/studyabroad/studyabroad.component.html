@@ -1,0 +1,33 @@
+<div class="common-banner-section top-pad">
+        <img class="banner-image" src="../../../assets/SbaImages/country-australia.jpg" />
+        <div class="overlay"></div>
+        <div class="text-block">
+          <h3>Hello</h3>
+        </div>
+      </div>
+
+
+      <section class="study-destinations container">
+            <div class="sub-title common-sub-hed-pad">
+              <h4 class="title-text title-underline">EXPLORE YOUR  STUDY ABROAD DESTINATIONS</h4>
+            </div>
+          
+            <div class="country-grid">
+              <div *ngFor="let countrycard of studyDestinations ">
+                <div class="country-card"> <!-- *ngIf="countrycard.image.url>=7 === false" -->
+                  <div class="country-img">
+                    <img src="{{countrycard.image.url}}" />
+                  </div>
+                  <div  class="country-details">
+                    <div><a [routerLink]="['/countries',countrycard.id]"><h5>{{countrycard.title}}</h5></a></div>
+                    <div>
+                      <img src="{{countrycard.countryflag.url}}"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          
+          </section>
+          

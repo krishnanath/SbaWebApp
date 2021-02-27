@@ -1,0 +1,230 @@
+@import '../../../styles.scss';
+
+.carousel {
+  height: 555px;
+}
+
+.slider-img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.sub-title {
+  justify-content: center;
+  display: flex;
+
+}
+
+.home-slider-overlay {
+  position: relative;
+  height: 750px;
+
+  .slider-img {
+    height: 750px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: $image-overlay;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+
+  .text-block {
+    position: absolute;
+    top: 35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+
+    h1 {
+      font-size: 53px;
+      letter-spacing: 7px;
+      color: #ffffff;
+      text-transform: capitalize;
+      font-family: 'Yusei Magic', sans-serif !important;
+ 
+    }
+
+    p {
+      font-size: 23px;
+      color: #ffffff;
+      text-transform: capitalize;
+      
+      font-family: 'BrandonBlack' !important;
+    }
+
+
+  }
+}
+
+.visa-categories {
+  .visa-card {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 22px;
+  }
+
+  .visa-categories-card {
+    box-shadow: $box-shadow;
+    border-radius: 11px;
+
+    .visa-categories-img {
+      img {
+        width: 100%;
+        height: 200px;
+        border-top-right-radius: 11px;
+        border-top-left-radius: 11px;
+        object-fit: cover;
+      }
+    }
+
+    .visa-card-info {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 3%;
+
+      .visacard-title {
+        margin-bottom: 3%;
+      }
+
+      .visa-card-details {
+        height: 115px;
+        overflow: hidden;
+      }
+
+      .read-more {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 11px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.about-equire-section {
+  background: $lightcolor;
+
+  .about-equire-section-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 27px;
+  }
+  .common-sub-hed-pad{
+    margin-top: 27px;
+    margin-bottom: 28px;
+  }
+// ENQUIRE FORM
+ 
+.enquire-in-grid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap:17px;
+  label{
+    color: $textcolor;
+  }
+
+  input{
+    border: 1px solid $sbablue;
+    background: $white;
+    border-radius: 9px;
+  }
+  ::placeholder{
+    padding: 11px !important;
+    font-size: 11px !important;
+  }
+  
+
+}
+.textarea{
+  label{
+    color: $textcolor;
+  }
+
+  textarea{
+    border: 1px solid $sbablue;
+    background: $white;
+    border-radius: 9px;
+    height: 122px;
+  }
+}
+.submit-btn{
+  width: 144px;
+  height: 41px;
+  background: $sbablue;
+  color: $white;
+  box-shadow: $box-shadow;
+  border:1px solid $sbablue;
+
+}
+// END FORM STYLE
+
+
+}
+
+
+
+.study-destinations {
+  .country-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 22px;
+
+    .country-card {
+      box-shadow: $box-shadow;
+
+      .country-img {
+        img {
+          height: 155px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .country-details {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        padding: 3%;
+
+        img {
+          height: 32px;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width:1024px) {
+  .visa-card {
+
+    grid-template-columns: 50% 50%;
+    grid-gap: 22px;
+  }
+}
+
+@media screen and (max-width:900px){
+  .visa-card, .about-equire-section-grid, .country-grid {
+grid-template-columns: 100% !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .visa-card {
+
+    grid-template-columns: 100%;
+    grid-gap: 22px;
+  }
+}
+
+
+
+ 
