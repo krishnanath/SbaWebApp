@@ -33,7 +33,7 @@
               "src/styles.scss",
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss"
-             ],
+            ],
             "scripts": [
               "node_modules/marked/lib/marked.js",
               "node_modules/jquery/dist/jquery.min.js",
@@ -130,6 +130,15 @@
             "production": {
               "devServerTarget": "SbaWebApp:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://krishnanath.github.io/SbaWebApp/",
+            "repo": "https://github.com/krishnanath/SbaWebApp",
+            "name": "krishnanath",
+            "email": "malykrishna@gmail.com"
           }
         }
       }
